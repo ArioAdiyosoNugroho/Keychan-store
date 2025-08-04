@@ -21,7 +21,7 @@ const products = [
     {
         id: 1,
         name: "Custom Keychain",
-        description: "Custom Gantungan kunci, dengan bahan akrilik dan juga dengan desain yang bisa di pilih atau request melalui WhatsApp",
+        description: "Custom Gantungan kunci, dengan bahan akrilik dan juga dengan desain yang bisa di pilih atau request melalui WhatsApp, klik untuk melihat desain",
         price: "4.000-5.000",
         image: "images/key.jpg"
     },
