@@ -57,7 +57,7 @@ products.forEach(product => {
 // Jika produk adalah Recycled Keychain, bungkus dengan <a>
 if (product.name === "Custom Keychain") {
     productCard = document.createElement('a');
-    productCard.href = 'designs.html'; // ganti ke halaman tujuan
+    productCard.href = 'designs.html'; 
     productCard.className = 'product-card';
     productCard.style.textDecoration = 'none'; // hilangkan underline default link
 } else {
