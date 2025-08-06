@@ -2,7 +2,7 @@
     --primary: #2563eb;
     --primary-light: #3b82f6;
     --secondary: #10b981;
-    --accent: #f59e0b;
+    --accent: #daebff;
     --dark: #1e293b;
     --gray: #64748b;
     --light-gray: #e2e8f0;
@@ -375,7 +375,7 @@ nav {
 
 .whatsapp-btn {
     background-color: var(--secondary);
-    color: white;
+    color: white !important;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
@@ -387,7 +387,7 @@ nav {
 }
 
 .whatsapp-btn:hover {
-    background-color: #0ca678;
+    background-color: #0ca678 !important;
     color: white;
 }
 
@@ -406,6 +406,13 @@ nav {
 .modal-content {
     border-radius: 1rem;
     overflow: hidden;
+}
+
+.modal-footer a{
+    color: #000000 !important;
+}
+.modal-footer a:hover{
+    color: var(--white) !important;
 }
 
 .modal-header {
@@ -526,6 +533,7 @@ footer {
     right: 2rem;
     background-color: var(--secondary);
     color: white;
+    text-decoration: none;
     width: 60px;
     height: 60px;
     border-radius: 50%;
