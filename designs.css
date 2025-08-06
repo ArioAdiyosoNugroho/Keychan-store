@@ -447,13 +447,6 @@ nav {
     padding: 1.5rem;
 }
 
-.modal-footer a{
-    color: #000000 !important;
-}
-.modal-footer a:hover{
-    color: var(--white) !important;
-}
-
 .modal-title {
     font-weight: 700;
     color: var(--dark);
