@@ -54,32 +54,46 @@ const productGrid = document.querySelector('.product-grid');
 products.forEach(product => {
     let productCard;
 
-// Jika produk adalah Recycled Keychain, bungkus dengan <a>
-if (product.name === "Custom Keychain") {
-    productCard = document.createElement('a');
-    productCard.href = 'designs.html'; 
-    productCard.className = 'product-card';
-    productCard.style.textDecoration = 'none'; // hilangkan underline default link
-} else {
-    productCard = document.createElement('div');
-    productCard.className = 'product-card';
-}
-
-productCard.innerHTML = `
-    <div class="product-image">
-        <img src="${product.image}" alt="${product.name}">
-    </div>
-    <div class="product-info">
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <div class="product-price">
-            <span>Rp${product.price}</span>
-            <a href="https://wa.me/6283876717125?text=I'm%20interested%20in%20your%20${encodeURIComponent(product.name)}%20(product%20ID:%20${product.id})" class="whatsapp-product" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-`;
+    if (product.name === "Custom Keychain") {
+        productCard = document.createElement('div');
+        productCard.className = 'product-card highlight';
+        productCard.innerHTML = `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <div class="product-price">
+                    <span>Rp${product.price}</span>
+                    <a href="https://wa.me/6283876717125?text=I'm%20interested%20in%20your%20${encodeURIComponent(product.name)}%20(product%20ID:%20${product.id})" class="whatsapp-product" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                    <a href="designs.html" class="btn secondary" style="margin-top: 1rem; display: inline-block; padding: 0.75rem 2rem; min-width: 180px; text-align: center;">
+                      Lihat Desain
+                    </a>
+            </div>
+        `;
+    } else {
+        productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        productCard.innerHTML = `
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <div class="product-price">
+                    <span>Rp${product.price}</span>
+                    <a href="https://wa.me/6283876717125?text=I'm%20interested%20in%20your%20${encodeURIComponent(product.name)}%20(product%20ID:%20${product.id})" class="whatsapp-product" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        `;
+    }
 
 productGrid.appendChild(productCard);
 
